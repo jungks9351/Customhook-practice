@@ -24,18 +24,20 @@ const LocalStoragePage = () => {
   };
 
   return (
-    <Form onSubmit={submitForm}>
-      <Input
-        type='text'
-        placeholder='Enter todo'
-        value={inputValue}
-        onChange={handleInputChange}
-      />
+    <section>
+      <Form onSubmit={submitForm}>
+        <Input
+          type='text'
+          placeholder='Enter todo'
+          value={inputValue}
+          onChange={handleInputChange}
+        />
+      </Form>
       <ul>
         {todos &&
           todos.map((todo: string, idx: number) => <li key={idx}>{todo}</li>)}
       </ul>
-    </Form>
+    </section>
   );
 };
 
